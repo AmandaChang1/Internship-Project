@@ -1,0 +1,27 @@
+Zipkin example
+
+$ cd brave-webmvc-example
+$ cd webmvc4
+$ mvn jetty:run -Pfrontend
+$ mvn jetty:run -Pbackend
+
+$cd cassandra
+$cd apache-cassandra-3.11.2/
+$./bin/cassandra -f
+
+$cd zipkin
+$STORAGE_TYPE=cassandra3 java -jar ./zipkin-server/target/zipkin-server-2.9.5-SNAPSHOT-exec.jar --logging.level.zipkin=trace --logging.level.zipkin2=trace --logging.level.com.datastax.driver.core=debug
+
+*vizceral-express
+$cd vizceral-express
+$node app.js
+
+*vizceral-example
+$cd vizceral-example
+$npm run dev
+
+
+Front http://localhost:8081/
+Backend http://localhost:9000/api
+Zipkin http://localhost:9411/?serviceName=backend
+vizceral http://localhost:8080
