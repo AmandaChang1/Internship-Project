@@ -1,0 +1,21 @@
+service: zipviz-api
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  timeout: 10
+  region: us-west-2
+
+
+functions:
+  data:
+    handler: handler.data 
+    event: 
+      - http:
+        path: data
+        method: get
+        cors: true 
+
+
+
+
