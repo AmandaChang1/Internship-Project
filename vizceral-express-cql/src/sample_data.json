@@ -1,0 +1,70 @@
+{
+  "renderer": "global",
+  "name": "edge",
+  "maxVolume": 100000,
+  "entryNode": "INTERNET",
+  "nodes": [
+    {
+      "renderer": "region",
+      "layout": "ltrTree",
+      "name": "LocalHost",
+      "updated": 1531174127491,
+      "maxVolume": 100000,
+      "nodes": [
+        {
+          "name": "INTERNET"
+        },
+        {
+          "name": "CLIENT",
+          "displayName": "frontend",
+          "notices": [
+            {
+              "title": "CLIENT",
+              "link": "http://link/to/relevant/thing",
+              "severity": 1
+            }
+          ],
+          "class": "normal",
+          "metadata": {}
+        },
+        {
+          "name": "SERVER",
+          "displayName": "backend",
+          "notices": [
+            {
+              "title": "SERVER",
+              "link": "http://link/to/relevant/thing",
+              "severity": 1
+            }
+          ],
+          "class": "normal",
+          "metadata": {}
+        }
+      ],
+      "connections": [
+        {
+          "source": "INTERNET",
+          "target": "CLIENT",
+          "metrics": {
+            "normal": 136960,
+            "danger": 0,
+            "warning": 0
+          },
+          "notices": [],
+          "metadata": {}
+        },
+        {
+          "source": "CLIENT",
+          "target": "SERVER",
+          "metrics": {
+            "normal": 94303,
+            "danger": 0,
+            "warning": 0
+          },
+          "notices": [],
+          "metadata": {}
+        }
+      ]
+    }
+  ]
+}
