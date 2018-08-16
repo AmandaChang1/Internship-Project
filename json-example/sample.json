@@ -1,0 +1,25 @@
+{
+  "results": [
+    {
+      "foo": {
+        "bar": {
+          "name": "Sam"
+        }
+      }
+    },
+    {
+      "foo": {
+        "bar": {
+          "name": "Chi"
+        }
+      }
+    },
+    {
+      "foo": {
+        "bar": {
+          "name": "Patrick"
+        }
+      }
+    }
+  ]
+}
